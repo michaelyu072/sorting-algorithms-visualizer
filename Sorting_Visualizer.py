@@ -340,7 +340,8 @@ def main():
 							
 				if event.key == pygame.K_SPACE:
 					
-					mergeSort(dataSet,dataSet)
+					if not isSorted(dataSet):
+						mergeSort(dataSet,dataSet)
 					
 
 				if event.key == pygame.K_c:
@@ -350,7 +351,9 @@ def main():
 				if event.key == pygame.K_q:
 
 
-					quickSort(dataSet, 0, len(dataSet)-1, dataSet)
+					if not isSorted(dataSet):
+						quickSort(dataSet, 0, len(dataSet)-1, dataSet)
+						
 					for i in dataSet:
 						i.reset()
 

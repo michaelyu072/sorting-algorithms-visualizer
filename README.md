@@ -1,5 +1,5 @@
 # Sorting-Algorithms-Visualizer
-# This is my first python project done independently without following tutorials on Youtube
+# See a video of this project: https://drive.google.com/file/d/1jkX9yB8eFs2mdZi_JYAvRbzMhynezf2o/view?usp=sharing
 A program which visualizes merge sort, quick sort, and selection sort on an array of integers
 
 This program requires Python and Pygame installed to run

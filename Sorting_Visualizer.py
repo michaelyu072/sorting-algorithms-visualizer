@@ -10,8 +10,7 @@ pygame.init()
 
 
 '''Number of elements you want in the array'''
-n =50
-
+n = 150
 
 
 
@@ -100,9 +99,9 @@ def masterDraw(dataSet, win):
 
 def makeData(num, width):
 	array = []
-	gap = width*.4/num
+	gap = width*.5/num
 	for i in range(num):
-		array.append(data(200+i, width, gap, i))
+		array.append(data(300+i, width, gap, i))
 	random.shuffle(array)
 	for i in range(len(array)):
 		array[i].setIndex(i)
@@ -129,7 +128,7 @@ def merge(a,b, data):
 	while p1 < len(a) and p2 < len(b):
 
 		for event in pygame.event.get():
-			if event == pygame.QUIT:
+			if event.type == pygame.QUIT:
 				pygame.quit()
 
 		if a[p1].getVal() <= b[p2].getVal():
@@ -156,7 +155,7 @@ def merge(a,b, data):
 	if p1 == len(a): 
 		for val in b[p2:]:
 			for event in pygame.event.get():
-				if event == pygame.QUIT:
+				if event.type == pygame.QUIT:
 					pygame.quit()
 			c.append(val)
 			swap(data, ind, val.getIndex())
@@ -166,7 +165,7 @@ def merge(a,b, data):
 	else:               
 		for val in a[p1:]:
 			for event in pygame.event.get():
-				if event == pygame.QUIT:
+				if event.type == pygame.QUIT:
 					pygame.quit()
 			c.append(val)
 			swap(data, ind, val.getIndex())
@@ -213,7 +212,7 @@ def partition(arr, low, high, dataSet):
         chicken = i
         baby = j
         for event in pygame.event.get():
-        	if event == pygame.QUIT:
+        	if event.type == pygame.QUIT:
         		pygame.quit()
         
 
@@ -339,7 +338,6 @@ def main():
 							data = makeData(n,w)
 							
 				if event.key == pygame.K_SPACE:
-					
 					if not isSorted(dataSet):
 						mergeSort(dataSet,dataSet)
 					
@@ -350,10 +348,8 @@ def main():
 
 				if event.key == pygame.K_q:
 
-
 					if not isSorted(dataSet):
 						quickSort(dataSet, 0, len(dataSet)-1, dataSet)
-						
 					for i in dataSet:
 						i.reset()
 

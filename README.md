@@ -4,11 +4,11 @@ A program which visualizes merge sort, quick sort, and selection sort on an arra
 
 This program requires Python and Pygame installed to run
 
-When you run the program, a display window pops up with a randomly sorted array of integers represented as rectangles. You can press ENTER to use selection sort, SPACE to use merge sort, and Q to use quick sort on the data
+- When you run the program, a display window pops up with a randomly sorted array of integers represented as rectangles. You can press ENTER to use selection sort,   SPACE to use merge sort, and Q to use quick sort on the data
 
-You can press C to clear the space and create a new unsorted array when there is no algorithm running
+- You can press C to clear the space and create a new unsorted array when there is no algorithm running
 
-You can change the number of elements in the array by going to the source code and changing the 'n' variable at the top of the code
+- You can change the number of elements in the array by going to the source code and changing the 'n' var-iable at the top of the code
 
 Please note that since selection sort is a relatively slow sorting algorithm, you would have to wait much longer for the algorithm to complete
 
